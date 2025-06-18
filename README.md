@@ -21,7 +21,7 @@ This is a SQL-based data analysis project using the Chinook Music Store dataset.
 
 --
 
-## 📊 Sample Business Questions and Output
+## 📸 Sample Query Outputs
 
 ### 1. Top Customers by Revenue
 Which customers have spent the most money on music?
