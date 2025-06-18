@@ -1,4 +1,4 @@
--- 1. 🏆 Top 10 Customers by Revenue
+-- 1. Top 10 Customers by Revenue
 SELECT 
   c.FirstName || ' ' || c.LastName AS CustomerName,
   ROUND(SUM(il.UnitPrice * il.Quantity), 2) AS TotalSpent
@@ -10,7 +10,7 @@ ORDER BY TotalSpent DESC
 LIMIT 10;
 
 
--- 2. 🎧 Top 5 Genres by Revenue
+-- 2. Top 5 Genres by Revenue
 SELECT 
   g.Name AS Genre,
   ROUND(SUM(il.UnitPrice * il.Quantity), 2) AS GenreRevenue
@@ -22,7 +22,7 @@ ORDER BY GenreRevenue DESC
 LIMIT 5;
 
 
--- 3. 📈 Monthly Revenue Trend
+-- 3. Monthly Revenue Trend
 SELECT 
   strftime('%Y-%m', i.InvoiceDate) AS Month,
   ROUND(SUM(il.UnitPrice * il.Quantity), 2) AS MonthlyRevenue
@@ -32,7 +32,7 @@ GROUP BY Month
 ORDER BY Month;
 
 
--- 4. 🎤 Most Popular Artists by Track Purchases
+-- 4. Most Popular Artists by Track Purchases
 SELECT 
   ar.Name AS Artist,
   COUNT(il.InvoiceLineId) AS TotalPurchases
@@ -45,7 +45,7 @@ ORDER BY TotalPurchases DESC
 LIMIT 10;
 
 
--- 5. 🌎 Top Countries by Revenue
+-- 5. Top Countries by Revenue
 SELECT 
   c.Country,
   ROUND(SUM(il.UnitPrice * il.Quantity), 2) AS Revenue
@@ -56,7 +56,7 @@ GROUP BY c.Country
 ORDER BY Revenue DESC;
 
 
--- 6. 🛍️ Most Purchased Tracks
+-- 6. Most Purchased Tracks
 SELECT 
   t.Name AS TrackName,
   COUNT(il.InvoiceLineId) AS TimesPurchased
@@ -67,7 +67,7 @@ ORDER BY TimesPurchased DESC
 LIMIT 10;
 
 
--- 7. 🧠 Rank Customers by Total Spend
+-- 7. Rank Customers by Total Spend
 SELECT 
   c.FirstName || ' ' || c.LastName AS CustomerName,
   ROUND(SUM(il.UnitPrice * il.Quantity), 2) AS TotalSpent,
