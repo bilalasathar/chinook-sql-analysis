@@ -19,15 +19,6 @@ This is a SQL-based data analysis project using the Chinook Music Store dataset.
 - SQL Concepts: Joins, Aggregations, Subqueries, Window Functions
 - Dataset: [Chinook SQLite Database](https://github.com/lerocha/chinook-database)
 
----
-
-## 📁 Project Structure
-chinook-sql-analysis/
-│
-├── chinook_sql_analysis_queries.sql # All queries in one file
-├── screenshots/ # (Optional) Query result screenshots
-└── README.md # Project documentation
-
 --
 
 ## 📊 Sample Business Questions
